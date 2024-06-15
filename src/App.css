@@ -97,22 +97,6 @@ nav.navbar.scrolled {
   background-color: #212121;
   animation: fadeInDown 0.8s;
 }
-.logo-circle {
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-  background-color: white;
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-circle img {
-  width: 65px; /* Adjust the size of the inner image as needed */
-  height: 55px;
-  border-radius: 50%;
-}
 
 .brand-title {
   font-size: 20px; /* Smaller font size */
