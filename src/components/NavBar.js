@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../assets/img/artzonlogo.png";
-import logoScrolled from "../assets/img/artzon-logo.png";
+import logoScrolled from "../assets/img/artzonlogo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
@@ -35,12 +35,9 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img
-              src={scrolled ? logoScrolled : logo}
-              width="65"
-              height="60"
-              alt="Logo"
-            />
+            <div className="logo-circle">
+              <img src={scrolled ? logoScrolled : logo} alt="Logo" />
+            </div>
           </Navbar.Brand>
           {/* Conditional rendering for brand title */}
           <Navbar.Brand href="/" className="d-none d-md-block">
