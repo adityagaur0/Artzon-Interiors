@@ -50,44 +50,21 @@ export const Banner = () => {
   //       setIndex((prevIndex) => prevIndex + 1);
   //     }
   //   };
-
   return (
-    <section
-      className="banner"
-      id="home"
-      style={{
-        backgroundImage: `url(${headerImg})`,
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        // backgroundRepeat: "no-repeat",
-        position: "relative",
-        zIndex: -1,
-      }}
-    >
+    <section className="banner" id="home">
       <Container>
         <Row className="align-items-left">
           <Col>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div>
-                  {/* <span className="tagline">Welcome to my Portfolio</span> */}
                   <h1>
                     Design Your Dream <br />
                     Home With Us
-                    {/* <span
-                      className="txt-rotate"
-                      dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
-                    >
-                      <span className="wrap">{text}</span>
-                    </span> */}
                   </h1>
                   <p>Luxurious Interior Design for the Modern Home.</p>
                   <br />
-                  <button onClick={() => console.log("connect")}>
-                    Discover Now
-                  </button>
+                  <button>Discover Now</button>
                 </div>
               )}
             </TrackVisibility>
