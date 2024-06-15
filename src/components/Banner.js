@@ -60,9 +60,9 @@ export const Banner = () => {
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        // backgroundRepeat: "no-repeat",
         position: "relative",
-        zIndex: 1,
+        zIndex: -1,
       }}
     >
       <Container>
