@@ -1,12 +1,26 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { MailchimpForm } from "./MailchimpForm";
-import logo from "../assets/img/asgrv-logo.png";
+// import logo from "../assets/img/asgrv-logo.png";
+import logo from "../assets/img/artzon-logo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
+import headerImg from "../assets/img/footer_bg.png";
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <footer
+      className="footer"
+      style={{
+        backgroundImage: `url(${headerImg})`,
+        // backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        backgroundPositionX: "0px",
+        backgroundPositionY: "center",
+        // backgroundRepeat: "no-repeat",
+        position: "relative",
+        zIndex: 1,
+      }}
+    >
       <Container>
         <Row className="align-items-center justify-content-between">
           <MailchimpForm />
@@ -30,20 +44,15 @@ export const Footer = () => {
             <br />
 
             <h6>Address</h6>
-            <p>
-              xxxxxxx,
-              <br /> xxxx,
-              <br /> New Delhi , 110039, IN
-            </p>
-            <h6>
-              Phone no: <p>+91 99xxxxx</p>
-            </h6>
+            <p>New Delhi , 110039, IN</p>
+            <h6>Phone no:</h6>
+            <p>+91 99xxxxx</p>
 
             <h6>
               Email: <a href="mailto:artzon@gmail.com">artzon@gmail.com</a>
             </h6>
             <br />
-            <p>Copyright 2024. All Rights Reserved</p>
+            <h5>Copyright 2024. All Rights Reserved</h5>
           </Col>
         </Row>
       </Container>

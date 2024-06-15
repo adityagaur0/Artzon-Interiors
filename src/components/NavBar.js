@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../assets/img/asgrv-logo.png";
+import logo from "../assets/img/artzon-logo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
@@ -10,6 +10,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 100) {
@@ -27,18 +28,19 @@ export const NavBar = () => {
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
-  // useEffect(() => {
-  //   // Scroll to the Skills section when the component mounts
-  //   document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
-  // }, []);
+
   return (
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          {/* <div className="brand-title">ARTZON INTERIORS & DECOR</div> */}
           <Navbar.Brand href="/">
-            <img src={logo} width="95" height="75" alt="Logo" />
+            <img src={logo} width="65" height="60" alt="Logo" />
           </Navbar.Brand>
+          {/* Conditional rendering for brand title */}
+          <Navbar.Brand href="/" className="d-none d-md-block">
+            <div className="brand-title">ARTZON INTERIORS & DECOR</div>
+          </Navbar.Brand>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
@@ -54,16 +56,16 @@ export const NavBar = () => {
                 Home
               </Nav.Link>
               <Nav.Link
-                href="#skills"
+                href="#about"
                 className={
                   activeLink === "skills" ? "active navbar-link" : "navbar-link"
                 }
                 onClick={() => onUpdateActiveLink("skills")}
               >
-                About us
+                About Us
               </Nav.Link>
               <Nav.Link
-                href="#projects"
+                href="#services"
                 className={
                   activeLink === "projects"
                     ? "active navbar-link"
@@ -87,7 +89,7 @@ export const NavBar = () => {
                 </a>
               </div> */}
               <HashLink to="#contact">
-                <button className="vvd">
+                <button onClick={() => onUpdateActiveLink("contact")}>
                   <span>Let’s Connect</span>
                 </button>
               </HashLink>
@@ -98,3 +100,5 @@ export const NavBar = () => {
     </Router>
   );
 };
+
+export default NavBar;

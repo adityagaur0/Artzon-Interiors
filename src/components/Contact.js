@@ -257,11 +257,11 @@ export const Contact = () => {
   };
 
   return (
-    <section className="contact" id="skills">
+    <section className="contact" id="contact">
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="contact-bx wow zoomIn">
+            <div className="contact-bx ">
               <TrackVisibility>
                 {({ isVisible }) => (
                   <div
@@ -269,7 +269,8 @@ export const Contact = () => {
                       isVisible ? "animate__animated animate__fadeIn" : ""
                     }
                   >
-                    <h2>Get In Touch</h2>
+                    <h2 className="contact-title">Contact Us</h2>
+                    <h3 className="contact-subtitle">Get A Quote</h3>
                     <form onSubmit={handleSubmit}>
                       <Row>
                         <Col size={12} sm={6} className="px-1">
@@ -341,34 +342,10 @@ export const Contact = () => {
                   </div>
                 )}
               </TrackVisibility>
-
-              {/* <Carousel
-                responsive={responsive}
-                infinite={true}
-                className="owl-carousel owl-theme skill-slider"
-              >
-                <div className="item">
-                  <img src={meter1} height="150" width="150" alt="Image" />
-                  <h5>Consult</h5>
-                </div>
-                <div className="item">
-                  <img src={meter2} height="150" width="150" alt="Image" />
-                  <h5>Design</h5>
-                </div>
-                <div className="item">
-                  <img src={meter3} height="150" width="150" alt="Image" />
-                  <h5>Services</h5>
-                </div>
-                <div className="item">
-                  <img src={meter4} height="150" width="150" alt="Image" />
-                  <h5>Integrate</h5>
-                </div>
-              </Carousel> */}
             </div>
           </div>
         </div>
       </div>
-      {/* <img className="background-image-left" src={colorSharp} alt="Image" /> */}
     </section>
   );
 };

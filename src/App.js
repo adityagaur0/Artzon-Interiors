@@ -7,14 +7,18 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import AboutUs from "./components/AboutUS.js";
+import Services from "./components/Services.js";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
       <Banner />
-      <Skills />
-      <Projects />
+      <AboutUs />
+      <Services />
+      {/* <Skills /> */}
+      {/* <Projects /> */}
       <Contact />
       <Footer />
     </div>
