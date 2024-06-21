@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import bgImage from "../assets/img/service-bg.png";
 import architectureIcon from "../assets/img/se-icon1.png";
 import interiorDesignIcon from "../assets/img/se-icon2.png";
@@ -44,6 +46,11 @@ const services = [
 ];
 
 const Services = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <div
       className="services"
@@ -61,9 +68,15 @@ const Services = () => {
     >
       <h2 className="services-title">Our Services</h2>
       <h3 className="services-subtitle">What We’re Providing</h3>
-      <div className="services-container">
+      <div className="services-container" ref={ref}>
         {services.map((service, index) => (
-          <div className="service-card" key={index}>
+          <motion.div
+            className="service-card"
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ delay: index * 0.2, duration: 0.6 }}
+          >
             <div className="service-image">
               <img src={service.icon} alt={service.title} />
             </div>
@@ -71,7 +84,7 @@ const Services = () => {
               <h4 className="service-title">{service.title}</h4>
               <p className="service-description">{service.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
