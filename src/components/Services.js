@@ -5,6 +5,7 @@ import bgImage from "../assets/img/service-bg.png";
 import architectureIcon from "../assets/img/se-icon1.png";
 import interiorDesignIcon from "../assets/img/se-icon2.png";
 import retailDesignsIcon from "../assets/img/se-icon3.png";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const services = [
   {

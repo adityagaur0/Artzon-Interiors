@@ -31,7 +31,7 @@ export const Footer = () => {
       <Container>
         <Row className="align-items-center justify-content-between">
           <MailchimpForm />
-          <Col size={12} sm={6}>
+          <Col size={12} sm={6} className="text-center text-sm-start">
             <a href="#">
               <motion.img
                 src={logo}
@@ -43,8 +43,13 @@ export const Footer = () => {
             </a>
           </Col>
 
-          <Col size={12} sm={4} className="text-center text-sm-start">
+          <Col
+            size={12}
+            sm={4}
+            className="text-center text-sm-start contact-detials"
+          >
             <br />
+
             <motion.div
               className="social-icon d-flex justify-content-center justify-content-sm-start"
               initial={{ opacity: 0 }}
@@ -74,8 +79,10 @@ export const Footer = () => {
             >
               <h6>Address</h6>
               <p>
-                Dwarka more Vipin garden extension street no 2 plot no 46, New
-                Delhi ,IN
+                <a>
+                  Dwarka more Vipin garden extension street no 2 plot no 46, New
+                  Delhi ,IN
+                </a>
               </p>
               <h6>Phone no:</h6>
               <p>
@@ -87,17 +94,18 @@ export const Footer = () => {
                   +91 9718906563
                 </a>
               </p>
-
-              <h6>
-                Email :{" "}
+              <h6>Email : </h6>
+              <p>
                 <a
                   href="mailto:interiorsartzon@gmail.com"
                   className="phone-link"
                 >
                   interiorsartzon@gmail.com
                 </a>
-              </h6>
+              </p>
+
               <br />
+st
               <h5>Copyright 2024. All Rights Reserved</h5>
             </motion.div>
           </Col>
