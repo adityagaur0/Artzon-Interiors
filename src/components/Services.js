@@ -15,17 +15,17 @@ const services = [
   },
   {
     title: "Interior Design",
-    description: "Creating cohesive and stylish interior environments.",
+    description: "Creating stylish and functional interior spaces efficiently.",
     icon: interiorDesignIcon,
   },
   {
     title: "Furniture Design",
-    description: "Crafting innovative and functional furniture pieces.",
+    description: "Crafting innovative furniture pieces for various needs.",
     icon: retailDesignsIcon,
   },
   {
     title: "Office Design",
-    description: "Designing productive and ergonomic office spaces.",
+    description: "Designing efficient and ergonomic office environments.",
     icon: architectureIcon,
   },
 ];

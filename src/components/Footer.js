@@ -103,8 +103,7 @@ export const Footer = () => {
                   interiorsartzon@gmail.com
                 </a>
               </p>
-              <br />
-              st
+
               <h5>Copyright 2024. All Rights Reserved</h5>
             </motion.div>
           </Col>
