@@ -89,9 +89,14 @@ h6 {
   width: 100%;
   /* Ensures that the flexbox occupies full height */
 }
+.social-icon-col {
+  flex: 1; /* Allow this column to grow */
+}
 
 .contact-info-col {
-  justify-content: center; /* Centers content horizontally */
+  flex: 1; /* Allow this column to grow */
+
+  justify-content: center; /* Align content to the right */
 }
 
 .contact-info h6 {
@@ -104,7 +109,7 @@ h6 {
 }
 
 .contact-info a.phone-link {
-  color: #df8133; /* Change to your desired color */
+  color: #d97706;
   text-decoration: none; /* Remove underline */
 }
 
@@ -341,7 +346,6 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 .about-section h2,
 .about-section p {
   margin: 0 0 20px 0;
-  text-align: justify;
 }
 
 .about-section h1 {
@@ -358,6 +362,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 .about-section p {
   font-size: 1rem;
   line-height: 1.6;
+  text-align: justify;
 }
 
 .about-section .highlight {
@@ -461,7 +466,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 .info-image {
   width: 100%;
   height: auto;
-  max-width: 600px; /* Limit the image width */
+  max-width: 60%;
   border-radius: 10px;
 }
 
@@ -596,6 +601,57 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 
 /*..........PROJECTS.........*/
+/* Add to your existing CSS */
+/* Add to your existing CSS */
+
+.lightbox-modal .modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.lightbox-body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrolling */
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Ensures the image covers the available space */
+  transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10; /* Ensure the button is on top of the image */
+}
+
+@media (max-width: 768px) {
+  .lightbox-image {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -750,6 +806,10 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 .footer img {
   width: 40%;
+  display: flex;
+  align-items: right;
+
+  justify-content: right;
 }
 .footer p {
   font-weight: 400;
@@ -805,6 +865,9 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 
 @media (max-width: 768px) {
+  .footer img {
+    width: 40%;
+  }
   .footer h6 {
     border-left: 2px solid #df8133;
     padding-left: 18px;
@@ -824,5 +887,4 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     justify-content: start;
     text-align: start;
   }
-
 }

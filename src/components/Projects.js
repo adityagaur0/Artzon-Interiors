@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
+import Lightbox from "./LightBox"; // Import Lightbox component
 import bgImage from "../assets/img/service-bg.png";
 import project1 from "../assets/img/projects/p1.JPG";
 import project2 from "../assets/img/projects/p2.JPG";
@@ -28,7 +29,6 @@ const recentProjects = [
   project6,
   // project8,
   project9,
-
   project10,
   // project12,
   project13,
@@ -46,6 +46,8 @@ const Projects = () => {
   });
 
   const [itemsPerGroup, setItemsPerGroup] = useState(3);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -63,6 +65,16 @@ const Projects = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+    setLightboxOpen(true);
+  };
+
+  const handleCloseLightbox = () => {
+    setLightboxOpen(false);
+    setSelectedImage(null);
+  };
 
   const groupedProjects = [];
   for (let i = 0; i < recentProjects.length; i += itemsPerGroup) {
@@ -96,6 +108,8 @@ const Projects = () => {
                       className="d-block w-100 project-carousel-img"
                       src={project}
                       alt={`Project ${index * itemsPerGroup + idx + 1}`}
+                      onClick={() => handleImageClick(project)}
+                      style={{ cursor: "pointer" }}
                     />
                   </Col>
                 ))}
@@ -104,6 +118,11 @@ const Projects = () => {
           </Carousel.Item>
         ))}
       </Carousel>
+      <Lightbox
+        show={lightboxOpen}
+        image={selectedImage}
+        handleClose={handleCloseLightbox}
+      />
     </div>
   );
 };

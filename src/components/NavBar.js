@@ -46,7 +46,6 @@ export const NavBar = () => {
                   >
                     <img src={navIcon3} alt="Instagram" />
                   </a>
-
                   <a href="#">
                     <img src={navIcon2} alt="Icon" />
                   </a>
@@ -55,10 +54,10 @@ export const NavBar = () => {
                   </a>
                 </div>
               </Col>
-              <Col>
+              <Col className="center-logo-col">
                 <img src={logo} className="center-logo" alt="Logo" />
               </Col>
-              <Col className="contact-info-col">
+              <Col className="contact-info-col" xs={12} md={4} lg={4}>
                 <div className="contact-info">
                   <h6>
                     Email:{" "}
@@ -70,13 +69,13 @@ export const NavBar = () => {
                     </a>
                   </h6>
                   <h6>
-                    Phone No:{" "}
+                    Ph No:{" "}
                     <a href="tel:+919599055822" className="phone-link">
-                      +91 9599055822
+                      9599055822
                     </a>
-                    ,
+                    ,{""}
                     <a href="tel:+919718906563" className="phone-link">
-                      +91 9718906563
+                      9718906563
                     </a>
                   </h6>
                 </div>
