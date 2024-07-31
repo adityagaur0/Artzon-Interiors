@@ -60,7 +60,7 @@ export const NavBar = () => {
               <Col className="contact-info-col" xs={12} md={4} lg={4}>
                 <div className="contact-info">
                   <h6>
-                    Email:{" "}
+                    <span>&#9993;</span>{" "}
                     <a
                       href="mailto:interiorsartzon@gmail.com"
                       className="phone-link"
@@ -69,7 +69,7 @@ export const NavBar = () => {
                     </a>
                   </h6>
                   <h6>
-                    Ph No:{" "}
+                    <span>&#128222;</span>{" "}
                     <a href="tel:+919599055822" className="phone-link">
                       9599055822
                     </a>

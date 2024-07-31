@@ -141,6 +141,9 @@ h6 {
   align-items: center;
   justify-content: space-between;
 }
+.contact-info-col .contact-info .black-icon {
+  color: black; /* Ensure this is not overridden */
+}
 
 nav.navbar .navbar-nav {
   flex-direction: row;
