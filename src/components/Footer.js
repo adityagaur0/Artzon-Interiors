@@ -45,13 +45,14 @@ export const Footer = () => {
 
           <Col
             size={12}
-            sm={4}
+            sm={12}
+            md={4}
             className="text-center text-sm-start contact-detials"
           >
             <br />
 
             <motion.div
-              className="social-icon d-flex justify-content-center justify-content-sm-start"
+              className="social-iconn "
               initial={{ opacity: 0 }}
               animate={footerInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
@@ -63,13 +64,12 @@ export const Footer = () => {
               >
                 <img src={navIcon3} alt="Instagram" />
               </a>
-
-              <a href="#">
+              {/* <a href="#">
                 <img src={navIcon2} alt="Icon" />
               </a>
               <a href="">
                 <img src={navIcon1} alt="Icon" />
-              </a>
+              </a> */}
             </motion.div>
             <br />
             <motion.div
@@ -103,9 +103,8 @@ export const Footer = () => {
                   interiorsartzon@gmail.com
                 </a>
               </p>
-
               <br />
-st
+              st
               <h5>Copyright 2024. All Rights Reserved</h5>
             </motion.div>
           </Col>

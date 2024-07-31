@@ -21,28 +21,16 @@ const services = [
     icon: interiorDesignIcon,
   },
   {
-    title: "Retail Designs",
+    title: "Furniture Design",
     description:
       "Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum lacus.",
     icon: retailDesignsIcon,
   },
   {
-    title: "Architecture",
+    title: "Office Design",
     description:
       "Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum lacus.",
     icon: architectureIcon,
-  },
-  {
-    title: "Interior Design",
-    description:
-      "Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum lacus.",
-    icon: interiorDesignIcon,
-  },
-  {
-    title: "Retail Designs",
-    description:
-      "Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum lacus.",
-    icon: retailDesignsIcon,
   },
 ];
 

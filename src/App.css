@@ -799,20 +799,25 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 /*.........FOOTER.........*/
 .footer {
-  padding: 50px 0 50px 0;
+  padding: 50px 0;
   font-family: "Playfair Display", serif;
-  /* background-image: url('./assets/img/footer-bg.png'); */
   background-color: #fff;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%; /* Ensure full width */
 }
-.footer img {
+/* .footer img {
   width: 40%;
   display: flex;
   align-items: right;
 
-  justify-content: right;
+  justify-content: center;
+} */
+.footer img {
+  width: 40%;
+  display: block; /* Centering block-level elements */
+  margin: 0 auto; /* Auto margins for centering */
 }
 .footer p {
   font-weight: 400;
@@ -855,21 +860,40 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   color: #df8133; /* Change to your desired color */
   text-decoration: none; /* Remove underline */
 }
+
+.social-iconn {
+  width: 40px;
+  justify-content: left; /* Ensure icons are centered */
+  /* flex-wrap: wrap;  */
+  /* display: flex; */
+}
+
 .social-icon img {
   background-color: #383b3f;
   border-radius: 10%;
   padding: 10px;
   margin: 5px;
-  width: 40px; /* Adjust the size as needed */
-  height: 40px; /* Adjust the size as needed */
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s ease;
 }
+
 .social-icon img:hover {
   background-color: #f8961e;
 }
 
 @media (max-width: 768px) {
+  .social-iconn {
+    justify-content: left; /* Center the icons */
+  }
+
+  .social-icon img {
+    display: flex;
+    width: 35px; /* Adjust icon size for mobile if needed */
+    height: 35px; /* Adjust icon size for mobile if needed */
+  }
   .footer img {
-    width: 40%;
+    width: 40%; /* Adjust as needed */
   }
   .footer h6 {
     border-left: 2px solid #df8133;
