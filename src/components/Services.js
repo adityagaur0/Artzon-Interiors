@@ -10,26 +10,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const services = [
   {
     title: "Architecture",
-    description:
-      "Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum lacus.",
+    description: "Designing functional and aesthetically pleasing buildings.",
     icon: architectureIcon,
   },
   {
     title: "Interior Design",
-    description:
-      "Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum lacus.",
+    description: "Creating cohesive and stylish interior environments.",
     icon: interiorDesignIcon,
   },
   {
     title: "Furniture Design",
-    description:
-      "Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum lacus.",
+    description: "Crafting innovative and functional furniture pieces.",
     icon: retailDesignsIcon,
   },
   {
     title: "Office Design",
-    description:
-      "Vivamus lorem nibh, viverra et semper vel, auctor vitae elementum lacus.",
+    description: "Designing productive and ergonomic office spaces.",
     icon: architectureIcon,
   },
 ];
