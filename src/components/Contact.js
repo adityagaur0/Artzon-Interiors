@@ -32,33 +32,33 @@ export const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
-    // const service_id = "service_w8qj525";
-    // const template_id = "template_asp41oa";
-    // const user_id = "ZOx38AUYFKnFOGxTY";
-    // const templateParams = {
-    //   from_firstname: formDetails.firstName,
-    //   from_lastname: formDetails.lastName,
-    //   from_email: formDetails.email,
-    //   from_mobile: formDetails.phone,
-    //   message: formDetails.message,
-    // };
-    // setButtonText("Sending...");
-    // emailjs
-    //   .send(service_id, template_id, templateParams, user_id)
-    //   .then((response) => {
-    //     console.log("Email sent successfully!", response);
-    //     setStatus({ success: true, message: "Message sent successfully" });
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error sending email:", error);
-    //     setStatus({
-    //       success: false,
-    //       message: "Something went wrong, please try again later.",
-    //     });
-    //   });
-    // setButtonText("Send");
-    // setFormDetails(formInitialDetails);
+    e.preventDefault();
+    const service_id = "service_w8qj525";
+    const template_id = "template_asp41oa";
+    const user_id = "ZOx38AUYFKnFOGxTY";
+    const templateParams = {
+      from_firstname: formDetails.firstName,
+      from_lastname: formDetails.lastName,
+      from_email: formDetails.email,
+      from_mobile: formDetails.phone,
+      message: formDetails.message,
+    };
+    setButtonText("Sending...");
+    emailjs
+      .send(service_id, template_id, templateParams, user_id)
+      .then((response) => {
+        console.log("Email sent successfully!", response);
+        setStatus({ success: true, message: "Message sent successfully" });
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        setStatus({
+          success: false,
+          message: "Something went wrong, please try again later.",
+        });
+      });
+    setButtonText("Send");
+    setFormDetails(formInitialDetails);
   };
 
   return (

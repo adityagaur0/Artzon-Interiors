@@ -446,11 +446,11 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   font-family: "Playfair Display", serif;
   background-color: #1a1a1a; /* Set background to black */
   color: white;
-  height: 80vh; /* Full screen height */
+  height: 100vh; /* Full screen height */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 0 60px;
+  padding: 60px 0 60px px;
   box-sizing: border-box;
   text-align: center;
 }
